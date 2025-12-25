@@ -1,22 +1,15 @@
-document.addEventListener("DOMContentLoaded", () => {
+function startExperience() {
+  // hide the message screen
+  const msg = document.getElementById("startMessage");
+  if (msg) msg.style.display = "none";
 
-  const startMessage = document.getElementById("startMessage");
+  // start flowers
+  document.body.classList.remove("not-loaded");
+
+  // play music
   const music = document.getElementById("bgMusic");
-
-  document.addEventListener("click", () => {
-
-    // hide message screen
-    if (startMessage) startMessage.style.display = "none";
-
-    // start flowers
-    document.body.classList.remove("not-loaded");
-
-    // play music
-    if (music) {
-      music.volume = 0.5;
-      music.play();
-    }
-
-  }, { once: true });
-
-});
+  if (music) {
+    music.volume = 0.5;
+    music.play();
+  }
+}
