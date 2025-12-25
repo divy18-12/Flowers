@@ -984,3 +984,20 @@ body {
 .not-loaded * {
   animation-play-state: paused !important;
 }
+#cornerMessage {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 1s ease;
+  z-index: 9999;
+}
+
+#cornerMessage.show {
+  opacity: 1;
+}
