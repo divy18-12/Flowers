@@ -1,18 +1,22 @@
-onload = () => {
-  const overlay = document.getElementById("startMessage");
+document.addEventListener("DOMContentLoaded", () => {
 
-  // wait for user click
+  const startMessage = document.getElementById("startMessage");
+  const music = document.getElementById("bgMusic");
+
   document.addEventListener("click", () => {
 
-  // hide the start message
-  document.getElementById("startMessage").style.display = "none";
+    // hide message screen
+    if (startMessage) startMessage.style.display = "none";
 
-  // start flower animation
-  document.body.classList.remove("not-loaded");
+    // start flowers
+    document.body.classList.remove("not-loaded");
 
-  // play background music
-  const music = document.getElementById("bgMusic");
-  music.volume = 0.5;
-  music.play();
+    // play music
+    if (music) {
+      music.volume = 0.5;
+      music.play();
+    }
 
-}, { once: true });
+  }, { once: true });
+
+});
