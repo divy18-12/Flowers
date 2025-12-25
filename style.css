@@ -1001,3 +1001,24 @@ body {
 #cornerMessage.show {
   opacity: 1;
 }
+#startMessage {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+.start-text {
+  color: white;
+  font-size: 20px;
+  font-family: sans-serif;
+  opacity: 0;
+  animation: fadeIn 1.5s forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
