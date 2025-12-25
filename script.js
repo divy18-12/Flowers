@@ -1,9 +1,12 @@
 onload = () => {
-  const c = setTimeout(() => {
+  const overlay = document.getElementById("startMessage");
+
+  // wait for user click
+  document.addEventListener("click", () => {
+    // hide message
+    overlay.style.display = "none";
+
+    // start flowers
     document.body.classList.remove("not-loaded");
-
-    document.getElementById("cornerMessage").classList.add("show");
-
-    clearTimeout(c);
-  }, 1000);
+  }, { once: true });
 };
