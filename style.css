@@ -990,19 +990,21 @@ body {
   width: 100vw;
   height: 100vh;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   background: black;
-  z-index: 100000;
+  z-index: 999999;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding-top: 15vh; /* pushes text UP */
 }
 
-#startMessage p {
+.msg-box {
   color: white;
-  font-size: 18px;
-  font-family: sans-serif;
+  font-size: 24px;
+  font-family: 'Segoe UI', sans-serif;
   text-align: center;
+  line-height: 1.6;
   padding: 0 20px;
-  line-height: 1.5;
 }
